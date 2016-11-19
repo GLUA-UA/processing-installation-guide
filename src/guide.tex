@@ -97,19 +97,25 @@ Now let's move it to /opt, by running this command in the terminal:
 	mv processing-* /opt/processing
 \end{lstlisting}
 
+Let's make a symbolic link, so that we don't need to specify the classpath, by doing this:
+
+\begin{lstlisting}
+	sudo ln -s /opt/processing/core/library/core.jar /usr/lib/jvm/java-8-oracle/jre/lib/ext/core.jar
+\end{lstlisting}
+
 Create an alias, so you can call it anywhere. Let's edit the .bashrc file.
 
 \begin{lstlisting}
 	nano ~/.bashrc
 \end{lstlisting}
 
+\clearpage
+
 Add this line in the end of the file and save it.
 
 \begin{lstlisting}
 	alias processing="/opt/processing/processing"
 \end{lstlisting}
-
-\clearpage
 
 Now, let's refresh our environment, by running this in the terminal:
 
