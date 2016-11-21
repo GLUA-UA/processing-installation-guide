@@ -114,7 +114,7 @@ Create an alias, so you can call it anywhere. Let's edit the .bashrc file.
 Add this line in the end of the file and save it.
 
 \begin{lstlisting}
-	alias processing="/opt/processing/processing"
+	export PATH=$PATH:/opt/processing/processing
 \end{lstlisting}
 
 Now, let's refresh our environment, by running this in the terminal:
@@ -127,6 +127,17 @@ To test if processing was successfully installed, run this in the terminal:
 
 \begin{lstlisting}
 	processing
+\end{lstlisting}
+
+\section{Installing other libraries}
+
+To install the sound library (\textbf{ddf}), download the latest \textbf{source.zip} from \url{https://github.com/processing/processing-sound/releases} and do the following:
+
+\begin{lstlisting}
+	cd ~/Downloads
+	unzip Minim*.zip
+	sudo cp Minim*/library/*.jar /usr/lib/jvm/java-8-oracle/jre/lib/ext/
+	sudo rm -rf Minim*
 \end{lstlisting}
 
 \end{document}
